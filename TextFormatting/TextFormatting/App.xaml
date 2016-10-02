@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:TextFormatting"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+       <ResourceDictionary Source="/themes/ExpressionLight.xaml"/>
     </Application.Resources>
 </Application>

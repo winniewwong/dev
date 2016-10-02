@@ -12,3 +12,5 @@ C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.Properties.Resourc
 C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.csproj.GenerateResource.Cache
 C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.exe
 C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.pdb
+C:\dev\TextFormatting\TextFormatting\obj\Debug\App.baml
+C:\dev\TextFormatting\TextFormatting\obj\Debug\themes\ExpressionLight.baml
