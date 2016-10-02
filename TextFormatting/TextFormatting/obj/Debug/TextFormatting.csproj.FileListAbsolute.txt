@@ -1,0 +1,14 @@
+C:\dev\TextFormatting\TextFormatting\bin\Debug\TextFormatting.exe.config
+C:\dev\TextFormatting\TextFormatting\bin\Debug\TextFormatting.exe
+C:\dev\TextFormatting\TextFormatting\bin\Debug\TextFormatting.pdb
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.csprojResolveAssemblyReference.cache
+C:\dev\TextFormatting\TextFormatting\obj\Debug\MainWindow.g.cs
+C:\dev\TextFormatting\TextFormatting\obj\Debug\App.g.cs
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting_MarkupCompile.cache
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting_MarkupCompile.lref
+C:\dev\TextFormatting\TextFormatting\obj\Debug\MainWindow.baml
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.g.resources
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.Properties.Resources.resources
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.csproj.GenerateResource.Cache
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.exe
+C:\dev\TextFormatting\TextFormatting\obj\Debug\TextFormatting.pdb
