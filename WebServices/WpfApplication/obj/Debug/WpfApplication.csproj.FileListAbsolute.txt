@@ -1,0 +1,14 @@
+C:\dev\WebServices\WpfApplication\bin\Debug\WpfApplication.exe.config
+C:\dev\WebServices\WpfApplication\bin\Debug\WpfApplication.exe
+C:\dev\WebServices\WpfApplication\bin\Debug\WpfApplication.pdb
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication.csprojResolveAssemblyReference.cache
+C:\dev\WebServices\WpfApplication\obj\Debug\MainWindow.g.cs
+C:\dev\WebServices\WpfApplication\obj\Debug\App.g.cs
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication_MarkupCompile.cache
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication_MarkupCompile.lref
+C:\dev\WebServices\WpfApplication\obj\Debug\MainWindow.baml
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication.g.resources
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication.Properties.Resources.resources
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication.csproj.GenerateResource.Cache
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication.exe
+C:\dev\WebServices\WpfApplication\obj\Debug\WpfApplication.pdb
