@@ -63,6 +63,28 @@ namespace GameProject
             get { return drawRectangle; }
         }
 
+        public int Health
+        {
+            get { return health; }
+
+            set 
+            {
+                // health should be 0-100
+                if ( value < 0)
+                {
+                    value = 0;
+                }
+                else if (value > 100)
+                {
+                    health = 100;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }
+
         #endregion
 
         #region Private properties
@@ -110,7 +132,7 @@ namespace GameProject
                 }
             }
         }
-
+        
         #endregion
 
         #region Public methods
@@ -121,23 +143,41 @@ namespace GameProject
         /// </summary>
         /// <param name="gameTime">game time</param>
         /// <param name="mouse">the current state of the mouse</param>
-        public void Update(GameTime gameTime, MouseState mouse)
+        public void Update(GameTime gameTime, KeyboardState keyboard)
         {
             // burger should only respond to input if it still has health
             if (health > 0)
             {
                 // move burger using mouse
                 // clamp burger in window
-                this.X = mouse.X;
-                this.Y = mouse.Y;  
-
+                // this.X = mouse.X;
+                // this.Y = mouse.Y; 
+ 
+                // move burger using keyboard: W to move up, A to move left, D to more right, and S to move down
+                if (keyboard.IsKeyDown(Keys.W) || keyboard.IsKeyDown(Keys.Up))
+                {
+                    Y -= GameConstants.BURGER_MOVEMENT_AMOUNT;
+                }
+                else if (keyboard.IsKeyDown(Keys.S) || keyboard.IsKeyDown(Keys.Down))
+                {
+                    Y += GameConstants.BURGER_MOVEMENT_AMOUNT;
+                }
+                else if (keyboard.IsKeyDown(Keys.D) || keyboard.IsKeyDown(Keys.Right))
+                {
+                    X += GameConstants.BURGER_MOVEMENT_AMOUNT;
+                }
+                else if (keyboard.IsKeyDown(Keys.A) || keyboard.IsKeyDown(Keys.Left))
+                {
+                    X -= GameConstants.BURGER_MOVEMENT_AMOUNT;
+                }
+               
                 // update shooting allowed
                 // timer concept (for animations) introduced in Chapter 7
                 if ( !canShoot )
                 {
                     elapsedCooldownTime += gameTime.ElapsedGameTime.Milliseconds;
 
-                    if (elapsedCooldownTime > GameConstants.BURGER_COOLDOWN_MILLISECONDS || mouse.LeftButton == ButtonState.Released)
+                    if (elapsedCooldownTime > GameConstants.BURGER_COOLDOWN_MILLISECONDS || keyboard.IsKeyUp(Keys.Space))
                     {
                         canShoot = true;
                         elapsedCooldownTime = 0;
@@ -145,7 +185,7 @@ namespace GameProject
                 }
                 
                 // shoot if appropriate
-                if (mouse.LeftButton == ButtonState.Pressed && canShoot)
+                if (keyboard.IsKeyDown(Keys.Space) && canShoot)
                 {
                     canShoot = false;
 
@@ -159,8 +199,9 @@ namespace GameProject
 
                     // add the new projectile to the game
                     Game1.AddProjectile(projectile);
-                }
 
+                    shootSound.Play();
+                }
             }
         }
 

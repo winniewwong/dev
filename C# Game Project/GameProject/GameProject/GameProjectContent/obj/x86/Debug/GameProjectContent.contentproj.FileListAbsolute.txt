@@ -1,2 +1,4 @@
 E:\Programming\Coursera\Beginning Game Programming in C# 2015\Assignments\Project Increment 1\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
 E:\Programming\Coursera\Beginning Game Programming in C# 2015\Assignments\Project Increment 1\After\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
+E:\Programming\Coursera\Beginning Game Programming in C# 2015\Assignments\Project Increment 4\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
+E:\Programming\Coursera\Beginning Game Programming in C# 2015\Assignments\Project Increment 5\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
