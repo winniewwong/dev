@@ -1,0 +1,246 @@
+; Copyright (c) 1996-1997, Macromedia, Inc.  All rights reserved.
+;
+;=================================================================
+;
+; Font Mapping Information for Authorware 4 -- Macintosh / Windows
+;
+; This file provides a font mapping table that can be modified
+; for Authorware 4 Windows and Macintosh pieces.
+;
+; If this file is in the same folder or directory as the 
+; Authorware 4 application, Authorware will automatically include 
+; this font mapping table in every new piece you create.  You can 
+; replace this fontmap.txt with one of your own creation if you
+; want different mappings.
+; 
+; Models and libraries do not store font mapping information 
+; internally.  The font mapping information loaded in the current 
+; piece is applied to the model as it is pasted into the current 
+; piece.  Libraries utilize the font mapping information loaded in 
+; the current piece when a library is opened.
+;
+; RTF files can be font mapped when importing into Authorware from 
+; either platform.  During the import of the RTF, Authorware 
+; will scan the current font map loaded, and then the RTF being 
+; imported.  Authorware tries to find a match of a font name used in 
+; the RTF with a font name in the fontmap.txt
+;
+;=================================================================
+;
+; Saving Font Information and Loading Font Mappings in Authorware
+;
+; To load a font mapping table into an existing piece, choose Font Mapping...
+; from the File sub-menu, located under the Modify Menu inside Authorware.
+; Click the button called Load Font Map.  You can merge with existing font 
+; mapping table, or replace the font mapping information and re-map the 
+; Cross Platform font mappings.
+;
+; To save all font information from the current piece, choose 
+; Font Mapping..., from the File sub-menu, located under the Modify Menu 
+; inside Authorware.  Click the button called Save Font Map... to save the 
+; font information to a directory or folder of your choice.
+;
+; To use a different font map during runtime, place the fontmap.txt
+; file you wish to use at runtime in the directory with the Authorware 
+; packaged piece.
+;
+; Note: In this file, a semicolon at the beginning of a line indicates
+; a comment.  Comments do not affect the fontmap.txt and are not saved
+; inside the piece when loaded into a piece.
+;
+;=================================================================
+;
+; Modifying or adding fonts and sizes to Fontmap.txt
+;
+; Font mappings specify which font and size substitutions to make when
+; moving a piece from one platform to another for both Authoring and playback.
+; Without Font mapping, Authorware will not substitute fonts or sizes for
+; fonts that are not defined in the fontmap.txt (this file).
+; If a font used on the original platform matches one on the crosss-platform, 
+; Authorware will use that font, unless otherwise specified in this file.
+;
+; The format for font mapping definitions is:
+;
+; Original Platform:FontName => CrossPlatform:FontName [MAP NONE] [oldSize=>newSize]
+; Fonts with spaces in their names must be enclosed in " " such as "Times New Roman"
+; Fonts without spaces in their names do not have to be enclosed in " "
+;
+; Specifying MAP NONE turns off character mapping for this font.
+; If you do not specify any size mappings, sizes are mapped 1 to 1
+; If you specify size mappings, they apply for THAT FONT ONLY.
+;
+;=================================================================
+;
+; One Way Mappings for Runtime delivery
+;
+; If you use the same name font on both platforms but would like to map the sizes, 
+; this example shows you how to do this.  Otherwise the sizes stay the same.
+; To use these mappings, just remove the ;
+; in the beginning of the lines that start with Mac or Win.
+;
+; If you are planning on delivering on multiple Windows systems, here are some 
+; mappings for a common font mapped set, Arial to Helvetica.  OEM fonts (bitmap)
+; provided with Windows do not map the same between Mac and specific Windows 
+; versions.  These mappings were based off height of the letters, not of letter 
+; spacing, or kerning.  Some OEM font sizes also change when displayed at 
+; higher resolutions. This can affect mappings as well.  These mappings work for 
+; one-way font mappings. They are used when you develop on one platform and 
+; deliver to another.
+;
+;
+; From Mac to Windows 3.1
+;Mac:"Helvetica" => Win:"Arial" 10=>6 12=>8 14=>9 18=>11 24=>16 36=>23 48=>32
+;
+; -----
+;
+; From Mac to Windows NT 3.5.1
+;Mac:"Helvetica" => Win:"Arial" 10=>7 12=>8 14=>9 18=>12 24=>16 36=>24 48=>32
+;
+; -----
+;
+; From Mac to Windows NT 4.0
+;Mac:"Helvetica" => Win:"Arial" 10=>7 12=>8 14=>9 18=>12 24=>16 36=>28 48=>32
+;
+; -----
+;
+; From Windows 3.5.1 or NT4 to Mac
+;Win:"Arial" => Mac:"Helvetica" 10=>13 12=>16 14=>18 18=>23 24=>31 36=>47 48=>64
+;
+; -----
+;
+; For those using Arial TT or Type 1 on both platforms
+;Mac:"Arial" => Win:"Arial"  12=>10 14=>12 18=>14 24=>18 36=>24
+;Win:"Arial" => Mac:"Arial"  10=>12 12=>14 14=>18 18=>24 24=>36
+;
+; -----
+;
+; For those using Helvetica TT or Type 1 on both platforms
+;Mac:"Helvetica" => Win:"Helvetica"  12=>10 14=>12 18=>14 24=>18 36=>24
+;Win:"Helvetica" => Mac:"Helvetica"  10=>12 12=>14 14=>18 18=>24 24=>36
+;
+;=================================================================
+;
+; Default Font mappings
+; Here are some typical font mappings
+;
+; To Match Size for Size no matter which platform
+;Mac:"Helvetica" =>  Win:"Arial" 
+;Win:"Arial"     =>  Mac:"Helvetica"
+;
+; For those using Helvetica on Mac and Arial on Windows 95
+;
+Mac:"Helvetica"    => Win:"Arial" 10=>7 11=>9 12=>10 13=>10 14=>12 16=>12 18=>14 24=>18 36=>28 47=>36 48=>36
+Win:"Arial"        => Mac:"Helvetica"7=>10 8=>10 9=>11 10=>12 11=>12 12=>14 13=>14 14=>18 16=>18 17=>24 18=>24 19=>24 24=>36 28=>36 36=>47
+;
+;
+; Common mappings on Macintosh
+Mac:"Chicago"      => Win:"Mac Chicago" 12=>10 14=>12 18=>14 24=>18 36=>24
+Mac:"Courier"      => Win:"Courier New"
+Mac:"Geneva"       => Win:"System" 12=>10 14=>12 18=>14 24=>18 36=>24
+Mac:"Monaco"       => Win:"Terminal"
+Mac:"New York"     => Win:"MS Serif"
+Mac:"Symbol"       => Win:"Symbol"  Map None
+Mac:"Times"        => Win:"Times New Roman" 12=>10 14=>12 18=>14 24=>18 36=>24
+;
+;
+; Common mappings on Windows
+Win:"Courier"          => Mac:"Courier"
+Win:"Courier New"      => Mac:"Courier"
+Win:"Mac Chicago"      => Mac:"Chicago" 10=>12 12=>14 14=>18 18=>24 24=>36
+Win:"MS Serif"         => Mac:"New York"
+Win:"Symbol"           => Mac:"Symbol"  Map None
+Win:"System"           => Mac:"Geneva" 10=>12 12=>14 14=>18 18=>24 24=>36
+Win:"Terminal"         => Mac:"Monaco"
+Win:"Times New Roman"  => Mac:"Times" 10=>12 12=>14 14=>18 18=>24 24=>36
+;
+; Note: When mapping from Windows to Macintosh, Courier and Courier New 
+; map onto Courier.  When coming back to Windows only Courier New
+; will be used.
+;
+;==========================================================================
+;
+; Japanese Font Mappings
+; 
+; The Macintosh Japanese Osaka font is mapped to a Windows font, and 
+; all Windows fonts are mapped to Macintosh's Osaka.  Map None is used
+; because only Roman fonts need upper-ASCII characters mapped.  To prevent 
+; mapping of any additional Japanese fonts, add them to this list.
+;
+; Note: If you do not have a Japanese system, the font names below 
+; will appear to be unreadable.  Also, if you are on a different double-
+; byte system, the following lines may produce errors when loaded, since
+; the double-byte Osaka font may not be compatible with your system font.
+;
+;Mac:Osaka=>Win:"•W€ƒSƒVƒbƒN" Map None
+;
+;Win:"‚l‚r ƒSƒVƒbƒN"=>Mac:Osaka Map None
+;Win:"‚l‚r -3/4'(c)"=>Mac:Osaka Map None
+;Win:"•W€ƒSƒVƒbƒN"=>Mac:Osaka Map None
+;Win:"•W€-3/4'(c)"=>Mac:Osaka Map None
+;Win:"-3/4'(c)"=>Mac:Osaka Map None
+;
+;============================================================================
+;
+; CHARACTER MAPPINGS
+;
+; Character mapping ensures that characters such as bullets, 
+; quote marks, and accented characters always appear correctly 
+; when text is moved from one platform to another.  When a 
+; character is mapped, a different ASCII value is substituted 
+; in order to preserve the appearance of the character.  
+;
+; Character mappings are used for all fonts EXCEPT those declared 
+; above as Map None. 
+;
+; The format for character mappings is:
+;
+; Platform: => Platform:  oldChar => newChar ...
+;
+; The following table provides a full set of bi-directional 
+; mappings for all ASCII values between 128 and 255.
+;
+; Note: Some characters are not available in both character sets. 
+; However, the bi-directional mapping table below preserves these 
+; characters even if they are mapped to a different platform and 
+; later re-mapped back to the original platform.
+
+Mac: => Win: 128=>196 129=>197 130=>199 131=>201 132=>209 133=>214 134=>220 
+Mac: => Win: 135=>225 136=>224 137=>226 138=>228 139=>227 140=>229 141=>231 
+Mac: => Win: 142=>233 143=>232 144=>234 145=>235 146=>237 147=>236 148=>238 
+Mac: => Win: 149=>239 150=>241 151=>243 152=>242 153=>244 154=>246 155=>245 
+Mac: => Win: 156=>250 157=>249 158=>251 159=>252 160=>134 161=>190 162=>162 
+Mac: => Win: 163=>163 164=>167 165=>149 166=>182 167=>223 168=>174 169=>169 
+Mac: => Win: 170=>153 171=>180 172=>168 173=>141 174=>198 175=>216 176=>144 
+Mac: => Win: 177=>177 178=>143 179=>142 180=>165 181=>181 182=>240 183=>221 
+Mac: => Win: 184=>222 185=>254 186=>138 187=>170 188=>186 189=>253 190=>230 
+Mac: => Win: 191=>248 192=>191 193=>161 194=>172 195=>175 196=>131 197=>188 
+Mac: => Win: 198=>208 199=>171 200=>187 201=>133 202=>160 203=>192 204=>195 
+Mac: => Win: 205=>213 206=>140 207=>156 208=>173 209=>151 210=>147 211=>148 
+Mac: => Win: 212=>145 213=>146 214=>247 215=>215 216=>255 217=>159 218=>158 
+Mac: => Win: 219=>164 220=>139 221=>155 222=>128 223=>129 224=>135 225=>183 
+Mac: => Win: 226=>130 227=>132 228=>137 229=>194 230=>202 231=>193 232=>203 
+Mac: => Win: 233=>200 234=>205 235=>206 236=>207 237=>204 238=>211 239=>212 
+Mac: => Win: 240=>157 241=>210 242=>218 243=>219 244=>217 245=>166 246=>136 
+Mac: => Win: 247=>152 248=>150 249=>154 250=>178 251=>176 252=>184 253=>189 
+Mac: => Win: 254=>179 255=>185 
+
+Win: => Mac: 128=>222 129=>223 130=>226 131=>196 132=>227 133=>201 134=>160 
+Win: => Mac: 135=>224 136=>246 137=>228 138=>186 139=>220 140=>206 141=>173 
+Win: => Mac: 142=>179 143=>178 144=>176 145=>212 146=>213 147=>210 148=>211 
+Win: => Mac: 149=>165 150=>248 151=>209 152=>247 153=>170 154=>249 155=>221 
+Win: => Mac: 156=>207 157=>240 158=>218 159=>217 160=>202 161=>193 162=>162 
+Win: => Mac: 163=>163 164=>219 165=>180 166=>245 167=>164 168=>172 169=>169 
+Win: => Mac: 170=>187 171=>199 172=>194 173=>208 174=>168 175=>195 176=>251 
+Win: => Mac: 177=>177 178=>250 179=>254 180=>171 181=>181 182=>166 183=>225 
+Win: => Mac: 184=>252 185=>255 186=>188 187=>200 188=>197 189=>253 190=>161 
+Win: => Mac: 191=>192 192=>203 193=>231 194=>229 195=>204 196=>128 197=>129 
+Win: => Mac: 198=>174 199=>130 200=>233 201=>131 202=>230 203=>232 204=>237 
+Win: => Mac: 205=>234 206=>235 207=>236 208=>198 209=>132 210=>241 211=>238 
+Win: => Mac: 212=>239 213=>205 214=>133 215=>215 216=>175 217=>244 218=>242 
+Win: => Mac: 219=>243 220=>134 221=>183 222=>184 223=>167 224=>136 225=>135 
+Win: => Mac: 226=>137 227=>139 228=>138 229=>140 230=>190 231=>141 232=>143 
+Win: => Mac: 233=>142 234=>144 235=>145 236=>147 237=>146 238=>148 239=>149 
+Win: => Mac: 240=>182 241=>150 242=>152 243=>151 244=>153 245=>155 246=>154 
+Win: => Mac: 247=>214 248=>191 249=>157 250=>156 251=>158 252=>159 253=>189 
+Win: => Mac: 254=>185 255=>216 
+
